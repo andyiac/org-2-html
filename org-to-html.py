@@ -4,14 +4,21 @@ import sys
 import time, datetime
 import pypandoc
 
-
-
-#import sys 
-#reload(sys)
-#sys.setdefaultencoding('utf-8')
+def get_file_type(path):
+    try:
+        _list = path.split('.')
+        if _list[1] == 'md':
+            return 'md'
+        if _list[1] == 'org':
+            return 'org'
+    except Exception as e:
+        print('----get file type error --->' + e)
+    return 'org'
 
 def convert_org(file_path):
-    result = pypandoc.convert_file(file_path, 'html', format='org')
+    _type = get_file_type(file_path)
+    
+    result = pypandoc.convert_file(file_path, 'html', format=_type)
     #https://stackoverflow.com/questions/9942594/unicodeencodeerror-ascii-codec-cant-encode-character-u-xa0-in-position-20
     # Python 这个编码问题需要好好研究一下了，遇到过好几次了。
     # result = u''.join((result)).encode('utf-8').strip()
@@ -54,7 +61,7 @@ def walk_dir_sort(dir):
             _path = os.path.join(root,name)
             _update_time = int(os.path.getmtime(_path))
             _list.append((_path,_update_time))
-    _list.sort(key=takeSecond)
+    _list.sort(key=takeSecond,reverse=True)
     final_list = list(map(takeFirst,_list))
     return final_list
 
