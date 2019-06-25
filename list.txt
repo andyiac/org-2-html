@@ -1,0 +1,451 @@
+/root/org/README.org
+/root/org/.gitignore
+ /root/org/life-things
+ /root/org/work
+ /root/org/image
+ /root/org/inbox
+ /root/org/translate
+ /root/org/algo
+ /root/org/plan-todo
+ /root/org/.git
+ /root/org/docs
+ /root/org/logbook
+/root/org/life-things/life.org
+/root/org/life-things/life.org~
+/root/org/work/work-xfz.org
+/root/org/image/1.jpg
+/root/org/inbox/emacs.org
+/root/org/inbox/vocabulary.org
+/root/org/inbox/org-mode.org
+/root/org/inbox/linux.org
+/root/org/inbox/lesson.org
+/root/org/inbox/android.org
+/root/org/inbox/cs.org
+/root/org/inbox/ideas.org
+/root/org/inbox/careerplanning.org
+/root/org/inbox/org-agenda.org
+/root/org/inbox/notes.org
+/root/org/inbox/journal.org
+/root/org/inbox/gtd.org
+/root/org/inbox/find-work.org
+/root/org/inbox/about-me.org
+/root/org/inbox/design.org
+/root/org/inbox/life-things.org
+/root/org/inbox/product-think.org
+/root/org/inbox/algo.org~
+/root/org/inbox/thought.org
+/root/org/inbox/side-project.org
+/root/org/inbox/zhihu.org
+/root/org/inbox/book.org
+/root/org/inbox/design.org~
+/root/org/inbox/java.org
+/root/org/inbox/km.org
+/root/org/inbox/goal.org
+/root/org/inbox/paulgraham.org
+/root/org/inbox/docker.org
+/root/org/inbox/config-static-ip.md
+/root/org/inbox/live.org
+/root/org/inbox/buffer.org
+/root/org/inbox/org-agenda.org~
+/root/org/inbox/learning-method.org
+ /root/org/translate/paulgraham-essays
+/root/org/translate/paulgraham-essays/programming-bottom-up.org
+/root/org/algo/algo.org
+/root/org/algo/HashMap.org
+/root/org/algo/HashMap.org~
+/root/org/plan-todo/2019.org
+/root/org/.git/COMMIT_EDITMSG~
+/root/org/.git/description
+/root/org/.git/index
+/root/org/.git/packed-refs
+/root/org/.git/HEAD
+/root/org/.git/FETCH_HEAD
+/root/org/.git/ORIG_HEAD
+/root/org/.git/config
+/root/org/.git/COMMIT_EDITMSG
+ /root/org/.git/objects
+ /root/org/.git/logs
+ /root/org/.git/hooks
+ /root/org/.git/info
+ /root/org/.git/branches
+ /root/org/.git/refs
+ /root/org/.git/objects/91
+ /root/org/.git/objects/8f
+ /root/org/.git/objects/16
+ /root/org/.git/objects/e4
+ /root/org/.git/objects/46
+ /root/org/.git/objects/6e
+ /root/org/.git/objects/80
+ /root/org/.git/objects/98
+ /root/org/.git/objects/d8
+ /root/org/.git/objects/be
+ /root/org/.git/objects/81
+ /root/org/.git/objects/8e
+ /root/org/.git/objects/73
+ /root/org/.git/objects/cc
+ /root/org/.git/objects/93
+ /root/org/.git/objects/1f
+ /root/org/.git/objects/0f
+ /root/org/.git/objects/4b
+ /root/org/.git/objects/90
+ /root/org/.git/objects/9c
+ /root/org/.git/objects/c6
+ /root/org/.git/objects/49
+ /root/org/.git/objects/25
+ /root/org/.git/objects/4e
+ /root/org/.git/objects/4d
+ /root/org/.git/objects/5b
+ /root/org/.git/objects/79
+ /root/org/.git/objects/6d
+ /root/org/.git/objects/b3
+ /root/org/.git/objects/22
+ /root/org/.git/objects/dc
+ /root/org/.git/objects/47
+ /root/org/.git/objects/05
+ /root/org/.git/objects/7c
+ /root/org/.git/objects/bd
+ /root/org/.git/objects/1d
+ /root/org/.git/objects/ce
+ /root/org/.git/objects/d5
+ /root/org/.git/objects/06
+ /root/org/.git/objects/info
+ /root/org/.git/objects/a5
+ /root/org/.git/objects/68
+ /root/org/.git/objects/a7
+ /root/org/.git/objects/01
+ /root/org/.git/objects/83
+ /root/org/.git/objects/fe
+ /root/org/.git/objects/4f
+ /root/org/.git/objects/63
+ /root/org/.git/objects/ab
+ /root/org/.git/objects/31
+ /root/org/.git/objects/7a
+ /root/org/.git/objects/66
+ /root/org/.git/objects/b2
+ /root/org/.git/objects/f6
+ /root/org/.git/objects/96
+ /root/org/.git/objects/c8
+ /root/org/.git/objects/60
+ /root/org/.git/objects/1a
+ /root/org/.git/objects/6f
+ /root/org/.git/objects/d4
+ /root/org/.git/objects/34
+ /root/org/.git/objects/pack
+ /root/org/.git/objects/50
+ /root/org/.git/objects/f9
+ /root/org/.git/objects/ec
+ /root/org/.git/objects/58
+ /root/org/.git/objects/8c
+ /root/org/.git/objects/62
+ /root/org/.git/objects/dd
+ /root/org/.git/objects/e8
+ /root/org/.git/objects/6c
+ /root/org/.git/objects/88
+ /root/org/.git/objects/bc
+ /root/org/.git/objects/2d
+ /root/org/.git/objects/d7
+ /root/org/.git/objects/6b
+ /root/org/.git/objects/10
+ /root/org/.git/objects/51
+ /root/org/.git/objects/5c
+ /root/org/.git/objects/9d
+ /root/org/.git/objects/40
+ /root/org/.git/objects/6a
+ /root/org/.git/objects/fb
+ /root/org/.git/objects/20
+ /root/org/.git/objects/7b
+ /root/org/.git/objects/97
+ /root/org/.git/objects/85
+ /root/org/.git/objects/ad
+ /root/org/.git/objects/c9
+ /root/org/.git/objects/7e
+ /root/org/.git/objects/b0
+ /root/org/.git/objects/41
+ /root/org/.git/objects/f8
+ /root/org/.git/objects/75
+ /root/org/.git/objects/33
+ /root/org/.git/objects/a9
+ /root/org/.git/objects/3f
+/root/org/.git/objects/91/aecfbe66cdf8ac6f34034da80ccd3dd52b8bef
+/root/org/.git/objects/8f/975ec4a8f595ea7921ddb9cc4274bbdf0ec3d6
+/root/org/.git/objects/8f/59f419e12424d9686ddf4c5984aaed9b084977
+/root/org/.git/objects/16/8e49aeb5ae401b17901d82c4757f379ea7d074
+/root/org/.git/objects/e4/26c953cd510557a82cf5340382277262ac3d02
+/root/org/.git/objects/e4/75597592a223f157b9a846cdc0296320b5ed8b
+/root/org/.git/objects/e4/8552717280b99dd9030c480d4015092a1aab16
+/root/org/.git/objects/e4/ec447ac29be201853d8cbb22d2e0bef9fd3e6e
+/root/org/.git/objects/46/ca2812c25bf3341f7cd9784839ba54fd28800c
+/root/org/.git/objects/46/35846c823ab645507f93dc0860c82642bac316
+/root/org/.git/objects/6e/85210b605a0e4630de547ed477de035f594c88
+/root/org/.git/objects/6e/d8f043daa50b8dd308d15a6385758d9f072a8d
+/root/org/.git/objects/80/f6652063f74829b121d806deef5fdf616ec7a8
+/root/org/.git/objects/80/fd6b7733fb4d7204f280a268d42acb39713a00
+/root/org/.git/objects/80/7c44926d9d8516acb77e54635150fa61f5b454
+/root/org/.git/objects/98/93c5156c116c4125811ecd126856eec240f0a4
+/root/org/.git/objects/d8/e340a0a1200b7c276f9ebf2bd7076b3b8e01e2
+/root/org/.git/objects/be/b80b7686924e96697c0f8e0bda101b1a92fa48
+/root/org/.git/objects/81/c2377f908dca605a61dbfd2278f85e01a5a5bd
+/root/org/.git/objects/8e/fe6c161bee01884f0f0188868469ee3812dfb5
+/root/org/.git/objects/8e/4bb8b7173e295e2a265b93811b7958cfe18fef
+/root/org/.git/objects/8e/2ef673d67f6eed51c60a5249972d0fdaa21d87
+/root/org/.git/objects/73/bb9ff68b838ddf9740a081471c5e0894baee04
+/root/org/.git/objects/cc/24a4b5470eb5b7eac6aa7a4d3e3ca64e9102fd
+/root/org/.git/objects/cc/035495b2fa4173a6d6966f96ba394c5dd3a07f
+/root/org/.git/objects/93/d51ecc15b9a9663e3b4264d78ca3a5e8687d8f
+/root/org/.git/objects/93/21646adae9d49ca1210859a13c3edfc1e5f7c8
+/root/org/.git/objects/1f/6404c11b313c97e70cd4b3e4e5a0c7165053f1
+/root/org/.git/objects/0f/05be3aaff90ae10cc5bf27f56961f8217baa93
+/root/org/.git/objects/0f/16981be08eef0e01aee70f0fdd81a96f7a5a29
+/root/org/.git/objects/4b/13f5fb29942110e64a7cc7620a52cf63d90814
+/root/org/.git/objects/90/b83b2a32279e9826f5d4b6309e91537884b87d
+/root/org/.git/objects/9c/419319c4cda0427410484034f4038c014b1e93
+/root/org/.git/objects/c6/3185f8763637b14b19d08790338083f2d57db2
+/root/org/.git/objects/49/6449b152757a8b2fd49778e3433724a98f8beb
+/root/org/.git/objects/25/d86bece9424223477cdb4b4244acea7995d6fa
+/root/org/.git/objects/4e/c5e77fb42cd0c10acf889aa643280ad4409d16
+/root/org/.git/objects/4d/448d55e6aecaa7e8bdd5d1e9e1a90b7d34afc1
+/root/org/.git/objects/5b/1ac0384192e5863c775dc8c2bb4c1431c16de6
+/root/org/.git/objects/79/f1c8756029a4ad20eae5df3a6e97bcd4283348
+/root/org/.git/objects/79/a40700f0a8b2e363650f5a287032e5a4fd8a1c
+/root/org/.git/objects/6d/cc727ca14a41e9d8a21e160606d7447a25e90e
+/root/org/.git/objects/6d/10446aa691861f87a34d71b2e2373eee7ebcad
+/root/org/.git/objects/b3/b0b881ad7de4a5fa84b784e4f333187a3e5873
+/root/org/.git/objects/22/4a6a9a11c962238e022e41ec1fc2da96687616
+/root/org/.git/objects/dc/a063541e3feb12cee142f3e2d22216ce1f15bc
+/root/org/.git/objects/dc/02e7600e857a8d81a69aa01e86232ff417515d
+/root/org/.git/objects/dc/c0c3568ce87e759ed829b67e3f4826a245c115
+/root/org/.git/objects/47/635222337febaccdc6c92845976f5111fc63d7
+/root/org/.git/objects/05/e3cf534950d37db4bb02bdddb53c4720fbb221
+/root/org/.git/objects/7c/fcef5ca7e24c56cbab7da3844991beb4d8fc4d
+/root/org/.git/objects/bd/1cd5f560db949d5bcd1dd377cd8330dd8f7acd
+/root/org/.git/objects/1d/d431a03689bcd915bf612b18a0a1915722dc03
+/root/org/.git/objects/1d/60c4969cfce458fba2866ee0890bbe3c4389e2
+/root/org/.git/objects/ce/e2fa62619f9adc821bd77ca1f33cd79cd848ff
+/root/org/.git/objects/ce/abf7ccb5066787d55ef92a512f97b6808068cd
+/root/org/.git/objects/d5/50a26386da2c52dfb037f2c2d19dcf40a442fe
+/root/org/.git/objects/06/b2c5100342fccfcb66d408ac8a1fc4dd93417f
+/root/org/.git/objects/a5/ef8f856f1f5a0c078b0f9d6dc035e3dbf57d3f
+/root/org/.git/objects/68/8ee9233726afadf2c153633987f82fd6602d4b
+/root/org/.git/objects/a7/856371ecf34ab5e127cc185988be3bda52986e
+/root/org/.git/objects/01/59d25ea662063a63287b93737bfbf9b8a01fbf
+/root/org/.git/objects/01/77e0dfbba53ccfb99f53ea2bd2d18ecd7a4be9
+/root/org/.git/objects/83/fe6f6883244d5ce187142d506ab5be78336ab6
+/root/org/.git/objects/fe/c4cdbc5458071baf81ea8e5fe71106958ee924
+/root/org/.git/objects/fe/0e38f4219e8438d86bca7b0197c9998c0b3107
+/root/org/.git/objects/4f/2055bbed392f23e6eed880c6f4ba7ceeadb3de
+/root/org/.git/objects/63/1d567788dba7d74736c35a02ef1c2afcaf3a92
+/root/org/.git/objects/63/9d905750185429e4d53ea4287e6d5edc60adb0
+/root/org/.git/objects/ab/4d2b9be6316e80e65f9b4d769d6dbf6b34442a
+/root/org/.git/objects/31/a387dd0dee04c3735f51add23c9997497d5576
+/root/org/.git/objects/7a/a46daac966154ceda0d5898293473a536d3b64
+/root/org/.git/objects/66/e365c6a1b822b7ac8a53db87cd7327d1b8b98d
+/root/org/.git/objects/b2/fed536358bfa2ce3d8de2100b86f53bea8b4d4
+/root/org/.git/objects/f6/080c2929a2f5465dd74cb655505bcf477d5981
+/root/org/.git/objects/96/8caf99cdccd0ec23e961b9aaba944e2d44646f
+/root/org/.git/objects/c8/e667e738eb8e63d247c0725254be7c9239a79e
+/root/org/.git/objects/60/fb8f39e3e91c408125edf58219ffaecdb5583b
+/root/org/.git/objects/1a/a22d54354301f0a1bcc32af1682eea91f44390
+/root/org/.git/objects/1a/f12b7d8e4baf2deef8893b86cad4a778c313bf
+/root/org/.git/objects/6f/062da4b501cc754abbb0f73d7e468fb9f3c4cb
+/root/org/.git/objects/d4/d6a08b4ec641e4c22d2e190a45fcaea1037fbb
+/root/org/.git/objects/34/c4057457710126a6c4a303d020757095c61b84
+/root/org/.git/objects/pack/pack-37a58e7eb1f85e75def0c2d68f9614278b41bbfb.pack
+/root/org/.git/objects/pack/pack-37a58e7eb1f85e75def0c2d68f9614278b41bbfb.idx
+/root/org/.git/objects/50/a2ee070384dea936a36a1410c15b23ee631b58
+/root/org/.git/objects/50/31bcc6808934fe95acc027f6fc3b2577ab5f9d
+/root/org/.git/objects/f9/5ff683a498c11b83a91f35d0235b6faa3d1d6f
+/root/org/.git/objects/ec/3b4b34338ca05876f42a5391bc75def191a5bb
+/root/org/.git/objects/58/dfd917a75cc58d9c7cb8463e66fdb384d8f513
+/root/org/.git/objects/8c/dd408a564915b180c5f91ce98c21b13e151a80
+/root/org/.git/objects/62/3c9a18adff6eef68ec8ef495a840dfcecb2edf
+/root/org/.git/objects/62/f7f5b5a597ccd3bba9f7755277795aa58d4dea
+/root/org/.git/objects/dd/e94d03bcfc25bcb3ed9b8d79513e72cb6354a6
+/root/org/.git/objects/e8/91fc043047294034a01718aa4b5ac85acc3ea6
+/root/org/.git/objects/e8/ee0df0d38ffbc9fd6dc87fd988f86d97dcbc61
+/root/org/.git/objects/6c/7b6351f0a3b6b3bc78647757d6c7911c28f11b
+/root/org/.git/objects/88/71fdda4d9f09bc006d8b795e04d519b176fa7b
+/root/org/.git/objects/bc/5e38564f272ace75ec763831f664a52ba2e9a5
+/root/org/.git/objects/bc/7aa5d026ffb777e2aef2810a0e31042e4700a2
+/root/org/.git/objects/2d/beb9825d89a8304ac74dd5968a81fcde893f33
+/root/org/.git/objects/d7/2b0775d69252210b67c6e4c58ec68ddf4ef884
+/root/org/.git/objects/d7/5f0507e9529a93fa4db1b7f9cfddd3dc82db42
+/root/org/.git/objects/6b/5a59fd40a1c85b804e9710224f4ea670bae631
+/root/org/.git/objects/10/b061d9ab76dec54bf89e3d4e3452ff0249e024
+/root/org/.git/objects/10/413f6ecfee0d10946eadb079be88285e869568
+/root/org/.git/objects/51/b9e535765022b3cf91affb009c28324c9e0227
+/root/org/.git/objects/5c/484c2fe591d8776dde969ff6490e6a13b08797
+/root/org/.git/objects/9d/ba502a9cc1db3b70de70a6062a5d8356400c74
+/root/org/.git/objects/40/8d9bd889eccb22f8b435bc7599bac0540d14bc
+/root/org/.git/objects/6a/ece9145b07cac43e306299ba89015c867292a9
+/root/org/.git/objects/6a/e1def1cf5616f67685f9bf6c0ed37270be5811
+/root/org/.git/objects/fb/fb07040b18bee1b615a82f5408c2a78fc13011
+/root/org/.git/objects/fb/02ae25587ce23d9103216ae28010e0d2d5ba7f
+/root/org/.git/objects/20/05ecead745a60d5e8235209522c5ff5d532c80
+/root/org/.git/objects/7b/7c5f25e5b00b64a9a76372b976cbfda5787ef0
+/root/org/.git/objects/97/eb916c234e01c49338723ce2acdd109622c959
+/root/org/.git/objects/85/78a1108bfa4057e6c1a47bf7477ea971f9626c
+/root/org/.git/objects/ad/5b8001a76fcf1a18e6b310fe52abd6244b4610
+/root/org/.git/objects/c9/cc235f9ff14a14851fd80ba26f4320345a12ea
+/root/org/.git/objects/7e/2f22dc6298b1b13ceea6e94518ad1e3c64499f
+/root/org/.git/objects/b0/bb8f25788c3c419a411688313a6d88f64fdcf1
+/root/org/.git/objects/41/bd3281b599a1db4269ac9036ca34a3fcc3dafd
+/root/org/.git/objects/41/0a2247de179a0e28e3586f4fdd6466e012ac6a
+/root/org/.git/objects/41/fa7c8e41e7074660e73b7f0d5e6f1e23ee2899
+/root/org/.git/objects/f8/0344c5a19773e7ea66ec36a28c116672cc12bf
+/root/org/.git/objects/75/29058a16e504c277650217ed6e12bf01e7deb1
+/root/org/.git/objects/33/a82b464277545a5ea7fccf1a2fa0cb9c112533
+/root/org/.git/objects/a9/8d25a733f5958e52122f91804e45ea3ab029e6
+/root/org/.git/objects/3f/2ff2d6cc8f257ffcade7ead1ca4042c0e884b9
+/root/org/.git/logs/HEAD
+ /root/org/.git/logs/refs
+ /root/org/.git/logs/refs/heads
+ /root/org/.git/logs/refs/remotes
+/root/org/.git/logs/refs/heads/master
+ /root/org/.git/logs/refs/remotes/origin
+/root/org/.git/logs/refs/remotes/origin/HEAD
+/root/org/.git/logs/refs/remotes/origin/master
+/root/org/.git/hooks/applypatch-msg.sample
+/root/org/.git/hooks/update.sample
+/root/org/.git/hooks/commit-msg.sample
+/root/org/.git/hooks/post-update.sample
+/root/org/.git/hooks/pre-applypatch.sample
+/root/org/.git/hooks/prepare-commit-msg.sample
+/root/org/.git/hooks/pre-receive.sample
+/root/org/.git/hooks/pre-rebase.sample
+/root/org/.git/hooks/pre-commit.sample
+/root/org/.git/hooks/pre-push.sample
+/root/org/.git/info/exclude
+ /root/org/.git/refs/heads
+ /root/org/.git/refs/remotes
+ /root/org/.git/refs/tags
+/root/org/.git/refs/heads/master
+ /root/org/.git/refs/remotes/origin
+/root/org/.git/refs/remotes/origin/HEAD
+/root/org/.git/refs/remotes/origin/master
+/root/org/docs/README.org
+/root/org/docs/chinese-copywriting-guidelines.md
+/root/org/docs/README.org~
+/root/org/logbook/2018-11-12.org
+/root/org/logbook/2018-12-13.org
+/root/org/logbook/2019-04-19.org
+/root/org/logbook/2018-09-28.org
+/root/org/logbook/2018-08-09.org
+/root/org/logbook/2018-05-07.org
+/root/org/logbook/readme.org~
+/root/org/logbook/2019-06-18.org
+/root/org/logbook/2018-10-30.org
+/root/org/logbook/2019-04-11.org
+/root/org/logbook/2018-10-24.org
+/root/org/logbook/2018-08-02.org
+/root/org/logbook/2018-10-29.org
+/root/org/logbook/2018-05-31.org
+/root/org/logbook/2018-08-13.org
+/root/org/logbook/2018-05-25.org
+/root/org/logbook/2018-04-27.org
+/root/org/logbook/2019-06-16.org~
+/root/org/logbook/2019-05-19.org
+/root/org/logbook/2019-06-14.org
+/root/org/logbook/2019-06-12.org
+/root/org/logbook/2019-04-25.org
+/root/org/logbook/2019-06-17.org
+/root/org/logbook/2019-04-16.org
+/root/org/logbook/2018-04-25.org
+/root/org/logbook/2018-07-12.org
+/root/org/logbook/2018-07-16.org
+/root/org/logbook/2018-10-25.org
+/root/org/logbook/2018-07-23.org
+/root/org/logbook/2018-05-24.org
+/root/org/logbook/2019-04-30.org
+/root/org/logbook/2018-05-11.org
+/root/org/logbook/2018-04-23.org
+/root/org/logbook/2018-10-08.org
+/root/org/logbook/2019-06-10.org~
+/root/org/logbook/2018-07-27.org
+/root/org/logbook/2018-08-15.org
+/root/org/logbook/2019-06-20.org~
+/root/org/logbook/2018-07-19.org
+/root/org/logbook/2018-04-18.org
+/root/org/logbook/2018-07-24.org
+/root/org/logbook/2018-07-17.org
+/root/org/logbook/2019-06-06.org
+/root/org/logbook/readme.org
+/root/org/logbook/2018-09-19.org
+/root/org/logbook/2018-04-20.org
+/root/org/logbook/2019-06-22.org
+/root/org/logbook/2018-05-28.org
+/root/org/logbook/2019-06-15.org
+/root/org/logbook/2019-06-13.org~
+/root/org/logbook/2019-06-07.org
+/root/org/logbook/2018-05-22.org
+/root/org/logbook/2018-11-08.org
+/root/org/logbook/2018-05-09.org
+/root/org/logbook/2019-06-23.org
+/root/org/logbook/2018-12-05.org
+/root/org/logbook/2019-06-21.org
+/root/org/logbook/2019-06-17.org~
+/root/org/logbook/2018-08-14.org
+/root/org/logbook/2018-11-14.org
+/root/org/logbook/2018-06-13.org
+/root/org/logbook/2018-05-23.org
+/root/org/logbook/2019-04-26.org
+/root/org/logbook/2018-11-06.org
+/root/org/logbook/2018-11-05.org
+/root/org/logbook/2018-11-09.org
+/root/org/logbook/2018-08-22.org
+/root/org/logbook/2019-06-16.org
+/root/org/logbook/2018-10-09.org
+/root/org/logbook/2019-06-19.org
+/root/org/logbook/2018-05-10.org
+/root/org/logbook/2019-04-27.org
+/root/org/logbook/2018-10-11.org
+/root/org/logbook/2018-09-25.org
+/root/org/logbook/2018-08-10.org
+/root/org/logbook/2019-06-15.org~
+/root/org/logbook/2018-06-04.org
+/root/org/logbook/2018-09-11.org
+/root/org/logbook/2018-11-20.org
+/root/org/logbook/2019-05-01.org
+/root/org/logbook/2018-05-17.org
+/root/org/logbook/2019-06-13.org
+/root/org/logbook/2019-06-24.org
+/root/org/logbook/2018-10-23.org
+/root/org/logbook/2018-06-20.org
+/root/org/logbook/2018-11-03.org
+/root/org/logbook/2018-07-31.org
+/root/org/logbook/2019-06-22.org~
+/root/org/logbook/2019-06-08.org
+/root/org/logbook/2018-10-31.org
+/root/org/logbook/2019-06-23.org~
+/root/org/logbook/2018-05-18.org
+/root/org/logbook/2019-06-14.org~
+/root/org/logbook/2019-05-08.org
+/root/org/logbook/2018-04-24.org
+/root/org/logbook/2018-07-13.org
+/root/org/logbook/2019-06-12.org~
+/root/org/logbook/2018-11-01.org
+/root/org/logbook/2019-06-10.org
+/root/org/logbook/2019-06-20.org
+/root/org/logbook/2019-05-18.org
+/root/org/logbook/2019-06-11.org~
+/root/org/logbook/2019-05-07.org
+/root/org/logbook/2019-06-18.org~
+/root/org/logbook/2018-04-28.org
+/root/org/logbook/2019-04-20.org
+/root/org/logbook/2019-06-24.org~
+/root/org/logbook/2019-04-10.org
+/root/org/logbook/2018-07-06.org
+/root/org/logbook/2018-10-12.org
+/root/org/logbook/2019-06-19.org~
+/root/org/logbook/2019-06-25.org
+/root/org/logbook/.emacs.desktop
+/root/org/logbook/2019-05-11.org
+/root/org/logbook/2018-10-15.org
+/root/org/logbook/2018-08-08.org
+/root/org/logbook/2019-06-21.org~
+/root/org/logbook/2018-06-07.org
+/root/org/logbook/2019-06-11.org
+/root/org/logbook/2018-04-26.org
+/root/org/logbook/2018-11-02.org
+/root/org/logbook/2018-11-07.org
+/root/org/logbook/2018-04-19.org
+/root/org/logbook/2018-10-26.org
