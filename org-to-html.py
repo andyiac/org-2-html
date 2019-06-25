@@ -87,7 +87,7 @@ def wrap_html_body(content_path):
 def get_file_name_by_path(name):
     name_list = name.split('/')
     _len = len(name_list)
-    name = '-'.join(name_list[_len-3:_len])
+    name = '-'.join(name_list[3:_len])
     name_list = name.split('.')
     name = name_list[0] + '.html'
     return name
@@ -132,19 +132,35 @@ def test6():
     html = wrap_html_body('/root/org/logbook/2019-06-24.org')
     save_file(html,'/root/code/org-2-html/public/test.html')
     
-def test7():
+def main():
     """
     测试生成指定 url (文件名称)
     """
     result = walk_dir('/root/org/')
     result = filter_org_md(result)
     for filePath in result:
-        print(filePath)
+        # print(filePath)
         html = wrap_html_body(filePath)
         save_path = '/root/code/org-2-html/public/' + get_file_name_by_path(filePath)
         save_file(html,save_path)
 
 
+def build_index():
+    org_list = walk_dir('/root/org')
+    org_list = filter_org_md(org_list)
+    final_list = []
+    for org in org_list:
+        link = get_file_name_by_path(org)
+        # org mode link style  [[http://www.gnu.org/software/emacs/][GNU Emacs]]
+        link = '[[' + 'http://org.andyiac.com/' + link + '][' + link[0:len(link)-5] + ']]' + '\n\n'
+        final_list.append(link)
+        print(link)
+
+    index_content = u''.join(final_list)
+    index_path = '/root/org/index.org'
+    save_file(index_content,index_path)
+        
     
 if __name__ == '__main__':
-    test7()
+    build_index()
+    main()
