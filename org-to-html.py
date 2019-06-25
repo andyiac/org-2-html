@@ -1,7 +1,9 @@
 #--coding: utf-8
 import os
 import sys
-import pypandoc;
+import time, datetime
+import pypandoc
+
 
 
 #import sys 
@@ -29,7 +31,7 @@ def save_file(content, path):
         file.write(content)
         print("---- save file success --->" + path)
     except Exception as e:
-        print("----save file error ----")
+        print("----save file error ----" + path)
         print(e)
 
 def walk_dir(dir):
@@ -39,10 +41,30 @@ def walk_dir(dir):
             _list.append(os.path.join(root,name))
     return _list
 
+def takeSecond(elem):
+    return elem[1]
+
+def takeFirst(elem):
+    return elem[0]
+
+def walk_dir_sort(dir):
+    _list = []
+    for root, dirs, files in os.walk(dir,True):
+        for name in files:
+            _path = os.path.join(root,name)
+            _update_time = int(os.path.getmtime(_path))
+            _list.append((_path,_update_time))
+    _list.sort(key=takeSecond)
+    final_list = list(map(takeFirst,_list))
+    return final_list
+
 def is_org_md(path):
     """
     判断文件是否是 org 或者 md
     """
+    if (type(path) != str):
+        return False
+    
     _path_list = path.split('.')
     
     org_flag = False
@@ -131,6 +153,13 @@ def test6():
     """
     html = wrap_html_body('/root/org/logbook/2019-06-24.org')
     save_file(html,'/root/code/org-2-html/public/test.html')
+
+def test7():
+    """
+    test work dir sort 方法
+    """
+    list = walk_dir_sort('/root/org/')
+    print(list)
     
 def main():
     """
@@ -146,15 +175,17 @@ def main():
 
 
 def build_index():
-    org_list = walk_dir('/root/org')
+    org_list = walk_dir_sort('/root/org')
     org_list = filter_org_md(org_list)
     final_list = []
     for org in org_list:
+        print(org)
         link = get_file_name_by_path(org)
+        modify_time = datetime.datetime.strptime(time.ctime(os.path.getmtime(org)), "%a %b %d %H:%M:%S %Y")
         # org mode link style  [[http://www.gnu.org/software/emacs/][GNU Emacs]]
-        link = '[[' + 'http://org.andyiac.com/' + link + '][' + link[0:len(link)-5] + ']]' + '\n\n'
+        link = str(modify_time) + ' [[' + 'http://org.andyiac.com/' + link + '][' + link[0:len(link)-5] + ']]' + '\n\n'
         final_list.append(link)
-        print(link)
+       # print(link)
 
     index_content = u''.join(final_list)
     index_path = '/root/org/index.org'
@@ -164,3 +195,5 @@ def build_index():
 if __name__ == '__main__':
     build_index()
     main()
+
+#   test7()
