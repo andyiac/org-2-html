@@ -17,7 +17,7 @@ pip install pypandoc
 
 * 软件设计
 
-** 功能[72%]
+** 功能[81%]
    - [X] 能够扫描特定目录下所有的 org 或者 md 文件生成特定的 html 文件
    - [X] 以某个路径为根目录进行扫描，深度广度优先搜索(直接使用了 Python 自带的 walk_dir 方法)
    - [X] 过滤文件目录只保留 .org 或者 .md 结尾的文件
@@ -27,8 +27,7 @@ pip install pypandoc
      - [X] 按照文件更新时间，创建时间排序
      - [X] 生成 index.org 文件
    - [X] 拼接索引文件，同时读取文件创建、更新时间
-   - [ ] 设置兼容 md 文件
-   - [ ] 文件搜索功能
+   - [X] 设置兼容 md 文件
    - [X] 图片或者视频的支持 
      图片可以直接使用 org mode 自带的林克形式支持形如以下形式
      #+BEGIN_SRC 
@@ -39,4 +38,6 @@ pip install pypandoc
      - html 文件输出路径
      - header footer 文件路径
      - 样式文件路径
+   - [ ] 文件搜索功能
+   - 直接拼接 HTML 方式拼接 index 文件自己更加可控
        

@@ -197,10 +197,35 @@ def build_index():
     index_content = u''.join(final_list)
     index_path = '/root/org/index.org'
     save_file(index_content,index_path)
-        
-    
-if __name__ == '__main__':
+
+def build_index_html():
+    org_list = walk_dir_sort('/root/org')
+    org_list = filter_org_md(org_list)
+    final_list = []
+    for org in org_list:
+        print(org)
+        link = get_file_name_by_path(org)
+        modify_time = str(datetime.datetime.strptime(time.ctime(os.path.getmtime(org)), "%a %b %d %H:%M:%S %Y"))
+
+        link = '<li> <a href="' + 'http://org.andyiac.com/' + link + '">'+ link[0:len(link)-5]+'</a> <span class="time">' + modify_time +'</span></li>'
+        final_list.append(link)
+
+    try:
+        header = read_file('/root/code/org-2-html/src/header.html')
+        content = '<ul class="link-list">' + u''.join(final_list) + '</ul>'
+        footer = read_file('/root/code/org-2-html/src/footer.html')
+        index_content = ''.join([header,content,footer])
+
+        index_path = '/root/code/org-2-html/public/index.html'
+        save_file(index_content,index_path)
+
+    except Exception as e:
+        print(e)
+
+
+def main_build_flow():
     build_index()
     main()
-
-#   test7()
+    
+if __name__ == '__main__':
+    build_index_html()
