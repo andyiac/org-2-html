@@ -21,7 +21,7 @@ def get_file_type(path):
 def convert_org(file_path):
     _type = get_file_type(file_path)
     result = pypandoc.convert_file(file_path, 'html', format=_type)
-    #https://stackoverflow.com/questions/9942594/unicodeencodeerror-ascii-codec-cant-encode-character-u-xa0-in-position-20
+    # https://stackoverflow.com/questions/9942594/unicodeencodeerror-ascii-codec-cant-encode-character-u-xa0-in-position-20
     # Python 这个编码问题需要好好研究一下了，遇到过好几次了。
     # result = u''.join((result)).encode('utf-8').strip()
     return result.encode('utf-8').strip()
@@ -144,6 +144,7 @@ def build_index():
     index_path = '/root/org/index.org'
     save_file(index_content,index_path)
 
+
 def build_index_html():
     org_list = walk_dir_sort('/root/org')
     org_list = filter_org_md(org_list)
@@ -198,11 +199,37 @@ def filter_logbook(file_list):
 def main_build_flow():
     build_index_html()
     build_org_md()
+
+def is_date(_date):
+    """
+    params: _data demo 2019-08-09
+    """
+    try: 
+        _time = time.strptime(_date, '%Y-%m-%d')
+        return True 
+    except Exception: 
+        return False 
+
+def get_file_name_by_path(_path):
+    _list = _path.split('.')
+    if _list[0]:
+        _path = _list[0]
+        _list = _path.split('/')
+        if len(_list) > 0:
+            return _list[len(_list)-1]
+    return 'null'
+
+def filter_logbook(_path):
+    """
+    返回 logbook list
+    """
+    name = get_file_name_by_path(_path)
+    return is_date(name)
+
     
 if __name__ == '__main__':
     main_build_flow()
 #    build_logbook()
-
 
 
 
