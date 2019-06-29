@@ -5,6 +5,9 @@ import time, datetime
 import pypandoc
 
 def get_file_type(path):
+    """
+    只是支持 org 或 md 文件
+    """
     try:
         _list = path.split('.')
         if _list[1] == 'md':
@@ -17,7 +20,6 @@ def get_file_type(path):
 
 def convert_org(file_path):
     _type = get_file_type(file_path)
-    
     result = pypandoc.convert_file(file_path, 'html', format=_type)
     #https://stackoverflow.com/questions/9942594/unicodeencodeerror-ascii-codec-cant-encode-character-u-xa0-in-position-20
     # Python 这个编码问题需要好好研究一下了，遇到过好几次了。
@@ -29,16 +31,16 @@ def read_file(full_path):
         file = open(full_path,"r")
         return file.read().encode('utf-8').strip()
     except Exception as e:
-        print("--read file error---" + e)
+        print("** read file error:" + e)
         return ""
 
 def save_file(content, path):
     try:
         file = open(path,'w')
         file.write(content)
-        print("---- save file success --->" + path)
+        print("** save file success:" + path)
     except Exception as e:
-        print("----save file error ----" + path)
+        print("** save file error:" + path)
         print(e)
 
 def walk_dir(dir):
@@ -114,71 +116,15 @@ def wrap_html_body(content_path):
         return ''
 
 def get_file_name_by_path(name):
+    """
+    根据文件路径生成 html 文件
+    """
     name_list = name.split('/')
     _len = len(name_list)
     name = '-'.join(name_list[3:_len])
     name_list = name.split('.')
     name = name_list[0] + '.html'
     return name
-
-def test1():
-    result = convert_org('/root/org/logbook/2019-06-24.org')
-    print result 
-
-def test2():
-    result = walk_dir('/root/org/')
-    result = filter_org_md(result)
-    print(result)
-
-def test3():
-    """
-    test read file 
-    """
-    content = read_file('/root/code/org-2-html/src/header.html')
-    print(content)
-
-
-def test4():
-    """
-    测试合并单个文件
-    """
-    html = wrap_html_body('/root/org/logbook/2019-06-24.org')
-    print(html)
-
-def test5():
-    """
-    测试合并多个问及那
-    """
-    file_list = walk_dir('/root/org/')
-    for path in file_list:
-        _html = wrap_html_body(path)
-        print(_html)
-
-def test6():
-    """
-    测试保存文件
-    """
-    html = wrap_html_body('/root/org/logbook/2019-06-24.org')
-    save_file(html,'/root/code/org-2-html/public/test.html')
-
-def test7():
-    """
-    test work dir sort 方法
-    """
-    list = walk_dir_sort('/root/org/')
-    print(list)
-    
-def main():
-    """
-    测试生成指定 url (文件名称)
-    """
-    result = walk_dir('/root/org/')
-    result = filter_org_md(result)
-    for filePath in result:
-        # print(filePath)
-        html = wrap_html_body(filePath)
-        save_path = '/root/code/org-2-html/public/' + get_file_name_by_path(filePath)
-        save_file(html,save_path)
 
 
 def build_index():
@@ -206,7 +152,6 @@ def build_index_html():
         print(org)
         link = get_file_name_by_path(org)
         modify_time = str(datetime.datetime.strptime(time.ctime(os.path.getmtime(org)), "%a %b %d %H:%M:%S %Y"))
-
         link = '<li> <a href="' + 'http://org.andyiac.com/' + link + '">'+ link[0:len(link)-5]+'</a> <span class="time">' + modify_time +'</span></li>'
         final_list.append(link)
 
@@ -222,10 +167,92 @@ def build_index_html():
     except Exception as e:
         print(e)
 
+def build_org_md():
+    result = walk_dir('/root/org/')
+    result = filter_org_md(result)
+    for filePath in result:
+        html = wrap_html_body(filePath)
+        save_path = '/root/code/org-2-html/public/' + get_file_name_by_path(filePath)
+        save_file(html,save_path)
 
+def build_logbook():
+    print("---build log book")
+    """
+    TODO 
+    1. filter logbooks 
+    2. merge logbooks (with title change and h1->h2 change) 
+    3. save to html 
+    4. add 2019 to menu
+    """
+    org_list = walk_dir_sort('/root/org')
+    org_list = filter_org_md(org_list)
+    final_list = []
+    print(org_list)
+    filter_logbook(org_list)
+    
+def filter_logbook(file_list):
+    for _file in file_list:
+        _file_arr = _file.split('.')
+        print(_file_arr[0])
+    
 def main_build_flow():
-    build_index()
-    main()
+    build_index_html()
+    build_org_md()
     
 if __name__ == '__main__':
-    build_index_html()
+    main_build_flow()
+#    build_logbook()
+
+
+
+
+################################################################################
+#  TEST funcitons 
+################################################################################
+
+
+def test1():
+    result = convert_org('/root/org/logbook/2019-06-24.org')
+    print result 
+
+def test2():
+    result = walk_dir('/root/org/')
+    result = filter_org_md(result)
+    print(result)
+
+def test3():
+    """
+    test read file 
+    """
+    content = read_file('/root/code/org-2-html/src/header.html')
+    print(content)
+
+def test4():
+    """
+    测试合并单个文件
+    """
+    html = wrap_html_body('/root/org/logbook/2019-06-24.org')
+    print(html)
+
+def test5():
+    """
+    测试合并多个问及那
+    """
+    file_list = walk_dir('/root/org/')
+    for path in file_list:
+        _html = wrap_html_body(path)
+        print(_html)
+
+def test6():
+    """
+    测试保存文件
+    """
+    html = wrap_html_body('/root/org/logbook/2019-06-24.org')
+    save_file(html,'/root/code/org-2-html/public/test.html')
+
+def test7():
+    """
+    test walk dir sort 方法
+    """
+    list = walk_dir_sort('/root/org/')
+    print(list)

@@ -1,12 +1,16 @@
 * {
 
 }
-
+html {
+    background: url('/bg-black.png')
+}
 .markdown-body {
     padding: 20px;
     max-width: 800px;
+    min-height: 800px;
     border: 1px solid rgb(237, 237, 237);
     border-radius: 4px;
+    background: #fff;
 }
 
 .top-bar {
@@ -16,13 +20,40 @@
 }
 
 .top-bar a {
-    color: #333 !important;
+}
+.top-bar .home-btn {
+    color: #333;
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
 }
-
+.top-bar .home-btn:hover {
+    color: #007ed9;
+}
+.top-bar .logout-btn {
+    color: #ccc;
+    float: right;
+    margin-top: 10px;
+}
+.top-bar .logout-btn:hover {
+    color: #333;
+}
 .top-bar a:hover {
     color: #0366d6;
     text-decoration: none !important;
+}
+ul.link-list {
+    padding-left: 0!important;
+}
+ul.link-list li{
+    list-style: none;
+    padding-bottom: .25em;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+ul.link-list li .time {
+    color: #bbb;
+    float: right;
+    font-size: 12px;
+    line-height: 24px;
 }

@@ -575,11 +575,12 @@
 }
 
 .markdown-body h1,
-.markdown-body h2 {
+.markdown-body h2{
   border-bottom: 1px solid #ededed;
   padding-bottom: .3em;
 }
 
+/*
 .markdown-body h2 {
   font-size: 1.5em;
 }
@@ -600,6 +601,7 @@
   color: #6a737d;
   font-size: .85em;
 }
+*/
 
 .markdown-body ol,
 .markdown-body ul {

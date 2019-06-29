@@ -9,6 +9,12 @@ rm  ~/code/org-2-html/public/*.*
 echo "======= cp css files ================="
 cp ~/code/org-2-html/src/*.css ~/code/org-2-html/public/
 
+echo "======= cp js files ================="
+cp ~/code/org-2-html/src/*.js ~/code/org-2-html/public/
+
+echo "====== cp image ====================="
+cp ~/code/org-2-html/src/*.png ~/code/org-2-html/public/
+
 echo "======= rebuild html ======================="
 python ~/code/org-2-html/org-to-html.py
 
