@@ -115,7 +115,7 @@ def wrap_html_body(content_path):
         print(e)
         return ''
 
-def get_file_name_by_path(name):
+def generate_html_name_by_path(name):
     """
     根据文件路径生成 html 文件
     """
@@ -133,7 +133,7 @@ def build_index():
     final_list = []
     for org in org_list:
         print(org)
-        link = get_file_name_by_path(org)
+        link = generate_html_name_by_path(org)
         modify_time = datetime.datetime.strptime(time.ctime(os.path.getmtime(org)), "%a %b %d %H:%M:%S %Y")
         # org mode link style  [[http://www.gnu.org/software/emacs/][GNU Emacs]]
         link = str(modify_time) + ' [[' + 'http://org.andyiac.com/' + link + '][' + link[0:len(link)-5] + ']]' + '\n\n'
@@ -151,7 +151,7 @@ def build_index_html():
     final_list = []
     for org in org_list:
         print(org)
-        link = get_file_name_by_path(org)
+        link = generate_html_name_by_path(org)
         modify_time = str(datetime.datetime.strptime(time.ctime(os.path.getmtime(org)), "%a %b %d %H:%M:%S %Y"))
         link = '<li> <a href="' + 'http://org.andyiac.com/' + link + '">'+ link[0:len(link)-5]+'</a> <span class="time">' + modify_time +'</span></li>'
         final_list.append(link)
@@ -173,7 +173,7 @@ def build_org_md():
     result = filter_org_md(result)
     for filePath in result:
         html = wrap_html_body(filePath)
-        save_path = '/root/code/org-2-html/public/' + get_file_name_by_path(filePath)
+        save_path = '/root/code/org-2-html/public/' + generate_html_name_by_path(filePath)
         save_file(html,save_path)
 
 def build_logbook():
@@ -187,19 +187,49 @@ def build_logbook():
     """
     org_list = walk_dir_sort('/root/org')
     org_list = filter_org_md(org_list)
-    final_list = []
-    print(org_list)
-    filter_logbook(org_list)
+    logbook_list = filter(filter_logbook, org_list)
+    concate_logbook_list(logbook_list,'/root/org/archive/2019.org')
     
-def filter_logbook(file_list):
-    for _file in file_list:
-        _file_arr = _file.split('.')
-        print(_file_arr[0])
     
-def main_build_flow():
-    build_index_html()
-    build_org_md()
+def concate_file_list(file_path_list, save_path):
+    filenames = file_path_list
+    try:
+        with open(save_path, 'w') as outfile:
+            for fname in filenames:
+                with open(fname) as infile:
+                    for line in infile:
+                        outfile.write(line)
+    except Exception as e:
+        print("Error: concate_file_list error , save path : " + save_path)
+        print(e)
 
+def concate_logbook_list(file_path_list, save_path):
+    filenames = file_path_list
+    try:
+        with open(save_path, 'w') as outfile:
+            for fname in filenames:
+                with open(fname) as infile:
+                    outfile.write('* ' + get_file_name_by_path(fname) + '\n')
+                    for line in infile:
+                        line = lower_heading(line)
+                        outfile.write(line)
+    except Exception as e:
+        print("Error: concate_file_list error , save path : " + save_path)
+        print(e)
+
+def lower_heading(str_line):
+	"""
+	标题降级
+	"""	
+	try: 
+	    if str_line.index('*') == 0 and str_line.index('* ') >= 0 and str_line.index('* ') <=6:
+		str_line = '*' + str_line
+		return str_line
+	except Exception as e:
+	    return str_line
+	return str_line        
+        
+        
 def is_date(_date):
     """
     params: _data demo 2019-08-09
@@ -219,6 +249,7 @@ def get_file_name_by_path(_path):
             return _list[len(_list)-1]
     return 'null'
 
+
 def filter_logbook(_path):
     """
     返回 logbook list
@@ -226,7 +257,12 @@ def filter_logbook(_path):
     name = get_file_name_by_path(_path)
     return is_date(name)
 
-    
+def main_build_flow():
+    build_logbook()
+    build_index_html()
+    build_org_md()
+
+
 if __name__ == '__main__':
     main_build_flow()
 #    build_logbook()

@@ -2,7 +2,9 @@
 
 }
 html {
-    background: url('/bg-black.png')
+    background: url('/bg-black.png');
+    background-color: #555;
+		   
 }
 .markdown-body {
     padding: 20px;
