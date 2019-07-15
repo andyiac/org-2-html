@@ -23,6 +23,7 @@ html {
 
 .top-bar a {
 }
+
 .top-bar .home-btn {
     color: #333;
     font-size: 24px;
@@ -31,6 +32,9 @@ html {
 }
 .top-bar .home-btn:hover {
     color: #007ed9;
+}
+.top-bar .menu-link {
+    margin-left: 10px;
 }
 .top-bar .logout-btn {
     color: #ccc;
